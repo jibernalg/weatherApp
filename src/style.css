@@ -62,6 +62,9 @@ button{
     flex-wrap:nowrap;
     height: 16vh;
     min-height: 100px;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    
 } 
 
 .byhour {
@@ -76,8 +79,10 @@ button{
     justify-content: center;
     align-items: flex-end;  
     color: gray;
-    font-weight:normal; 
+    font-weight:bold; 
+    
 }
+
   
 .icon{
     display: block;

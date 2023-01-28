@@ -1,7 +1,7 @@
 export async function weatherWeek(location){
     
     try{
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=c3425ef9bd020696fa52ff8f448fb263&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=c3425ef9bd020696fa52ff8f448fb263&units=metric`);
         const data = await response.json();
         console.log(data);
         let iconData={};
