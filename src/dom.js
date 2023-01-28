@@ -38,6 +38,7 @@ export async function createDOM() {
     sendButton.setAttribute('type','submit');
     sendButton.setAttribute('id','sendButton');
     const myIcon = new Image();
+    myIcon.setAttribute('id','myIcon');
     myIcon.src = Icon;
     sendButton.innerHTML='';
     sendButton.appendChild(myIcon);
