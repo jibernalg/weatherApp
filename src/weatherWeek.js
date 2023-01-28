@@ -8,11 +8,27 @@ export async function weatherWeek(location){
         let timeData={};
         let tempData={};
         let popData={};
+        
         for (let i=0;i<40;i++){
             iconData[i]=data.list[i].weather[0].icon;
-            timeData[i]=new Date(data.list[i].dt*1000).toLocaleDateString("en-US",{
-                weekday: 'short', hour:'numeric', hour12: true
-            });
+            
+            //let date = new Date(weatherInstantData.dt*1000);
+            //let offset = new Date().getTimezoneOffset();
+            //date.setTime(date.getTime() + (weatherInstantData.timezone*1000+offset*60*1000)); //subtracting one hour in milliseconds
+            //cityTimeH.innerHTML=`Time:&nbsp;&nbsp;&nbsp;&nbsp;${date.toLocaleTimeString("en-US",{hour:'2-digit', minute:'2-digit', hour12: true})}`;            
+            
+            timeData[i]=new Date(data.list[i].dt*1000);
+            let offset = new Date().getTimezoneOffset();
+            timeData[i].setTime(timeData[i].getTime() + (data.city.timezone*1000+offset*60*1000)); //subtracting one hour in milliseconds
+            timeData[i]=timeData[i].toLocaleTimeString("en-US",{hour:'2-digit', minute:'2-digit', hour12: true});
+
+            //timeData[i]=new Date(data.list[i].dt*1000).toLocaleDateString("en-US",{
+              //  weekday: 'short', hour:'numeric', hour12: true
+            //});
+
+            
+            
+
             tempData[i]=data.list[i].main.temp;
             popData[i]=data.list[i].pop*100;
         }
