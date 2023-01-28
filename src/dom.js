@@ -58,7 +58,7 @@ export async function createDOM() {
             cityDescription.innerHTML=`Weather:&nbsp;&nbsp;&nbsp;&nbsp;${weatherInstantData.weather[0].main}`;
             cityWind.innerHTML=`Wind:&nbsp;&nbsp;&nbsp;&nbsp;${(weatherInstantData.wind.speed*3.6).toFixed(1)} km/h`;
             cityTimeD.innerHTML=`Date:&nbsp;&nbsp;&nbsp;&nbsp;${(new Date(weatherInstantData.dt*1000)).toLocaleDateString("en-US",{
-                weekday: 'long', year:'numeric', month:'short', day:'numeric'
+                weekday: 'long', year:'numeric', month:'short'
             })}`;
             let date = new Date(weatherInstantData.dt*1000);
             let offset = new Date().getTimezoneOffset();

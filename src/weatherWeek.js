@@ -20,7 +20,7 @@ export async function weatherWeek(location){
             timeData[i]=new Date(data.list[i].dt*1000);
             let offset = new Date().getTimezoneOffset();
             timeData[i].setTime(timeData[i].getTime() + (data.city.timezone*1000+offset*60*1000)); //subtracting one hour in milliseconds
-            timeData[i]=timeData[i].toLocaleTimeString("en-US",{weekday: 'short', hour:'numeric', hour12: true});
+            timeData[i]=timeData[i].toLocaleTimeString("en-US",{hour:'numeric', hour12: true});
 
             //timeData[i]=new Date(data.list[i].dt*1000).toLocaleDateString("en-US",{
               //  weekday: 'short', hour:'numeric', hour12: true
