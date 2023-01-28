@@ -1,0 +1,85 @@
+body{
+    background-image: url('./background.jpg');
+    background-size:cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 500px;
+}
+
+#header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+}
+
+input{
+    background: rgba(255,255,255,0.4);
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    -webkit-box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 10px 1px rgba(0,0,0,0.5);
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+#instantWeather {
+    height: 74vh;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 400px;
+}
+
+.instantData{
+    color: white;
+    font-weight: bold;
+    margin-left: 3rem;
+}
+
+#footer {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    flex-wrap:nowrap;
+    height: 16vh;
+    min-height: 100px;
+} 
+
+.byhour {
+    height:30%;
+    min-width: 90px;
+    padding-right: 30px;
+}
+
+.datahour{
+    padding-top: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;  
+    color: gray;
+    font-weight:normal; 
+}
+  
+.icon{
+    display: block;
+    margin:0 auto;
+}
